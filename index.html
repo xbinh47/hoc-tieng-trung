@@ -373,7 +373,7 @@ function topV(){const p=lvPool(),k=p.filter(w=>K.has(w.id)).length;
 $("pbar").style.width=(p.length?k/p.length*100:0)+"%";$("ptxt").textContent=`Đã nhớ ${k}/${p.length} từ`}
 function setV(){const sw=(k,t,d)=>`<button class="sw" role="switch" aria-checked="${!!P[k]}" data-a="pf" data-v="${k}"><span><b>${t}</b><small>${d}</small></span><i></i></button>`;
 $("dlgc").innerHTML=`<h2>Cài đặt <button class="x" data-a="dlgx" aria-label="Đóng">${IC.x}</button></h2>
-<p class="lead" style="margin:10px 0 0">Âm thanh</p>${sw("auto","Tự đọc","Đọc từ khi lật thẻ và đọc câu sau khi trả lời.")}${sw("slow","Đọc chậm","Giảm tốc độ đọc để nghe rõ thanh điệu.")}${sw("net","Giọng online","Bật khi máy không có giọng tiếng Trung. Cần mạng.")}
+<p class="lead" style="margin:10px 0 0">Âm thanh</p>${sw("auto","Tự đọc","Tự đọc từ vựng khi lật thẻ. Câu ví dụ chỉ đọc khi bạn bấm loa.")}${sw("slow","Đọc chậm","Giảm tốc độ đọc để nghe rõ thanh điệu.")}${sw("net","Giọng online","Bật khi máy không có giọng tiếng Trung. Cần mạng.")}
 <p class="lead" style="margin:16px 0 0">Thẻ từ</p>${sw("dir","Xem nghĩa tiếng Việt trước","Thẻ hiện nghĩa, bạn nhớ lại chữ Hán.")}${sw("unk","Chỉ ôn từ chưa nhớ","Ẩn các từ đã đánh dấu “Đã nhớ”.")}
 <button class="btn danger" data-a="reset">Xóa tiến độ đã nhớ</button>`}
 
@@ -490,20 +490,20 @@ if(a=="reset"){if(confirm("Xóa toàn bộ tiến độ đã nhớ? Việc này 
 if(a=="lv"){P.lv=v;svP();mk();S.q=null;S.g=null;S.w=null;clearInterval(T);setV();render();return}
 if(gAct(a,v))return;
 if(a=="unkoff"){P.unk=false;svP();mk()}
-else if(a=="flip"){S.fl=!S.fl;const w=S.deck[S.i];if(P.auto&&S.fl){say(w.h);if(w.e)say(w.e,1)}}
+else if(a=="flip"){S.fl=!S.fl;const w=S.deck[S.i];if(P.auto&&S.fl)say(w.h)}
 else if(a=="no"||a=="yes"){const w=S.deck[S.i];if(a=="no")K.delete(w.id);else K.add(w.id);save();if(P.unk&&a=="yes"){S.deck.splice(S.i,1);if(S.i>=S.deck.length)S.i=0;S.fl=false}else nextCard();if(P.auto&&P.dir==0&&S.deck.length)say(S.deck[S.i].h)}
 else if(a=="qs"){S.tab="quiz";S.w=null;startQ(v,b.dataset.k);curPre();scrollTo(0,0)}
 else if(a=="qx")S.q=null;
 else if(a=="pk"){const q=S.q,it=q.list[q.n];if(q.a!=null)return;q.a=+v;if(it.o[+v]==it.ok)q.sc++;else{q.miss.push(it.w?`<li><span class="zh">${it.w.h}</span><span>${esc(it.w.p)}, ${esc(it.w.v)}</span></li>`:`<li><span class="zh" style="font-weight:400;font-size:17px">${esc(it.g||"")}</span></li>`);if(it.w){K.delete(it.w.id);save()}}
-if(P.auto&&it.full)say(it.full)}
+if(P.auto&&it.w&&it.full==it.w.h)say(it.full)}
 else if(a=="nx"){S.q.n++;S.q.a=null;curPre();scrollTo(0,0)}
 else if(a=="ws"){S.tab="quiz";S.q=null;startW(v);if(P.auto&&S.w.m=="s")say(S.w.w.h);scrollTo(0,0)}
 else if(a=="wx")S.w=null;
-else if(a=="wsh"){S.w.show=true;if(P.auto)say(S.w.w.e)}
+else if(a=="wsh")S.w.show=true;
 else if(a=="oa"){const s=S.w;if(!s.pk.includes(+v))s.pk.push(+v)}
 else if(a=="ou"){const s=S.w;s.pk=s.pk.filter(j=>j!=+v)}
 else if(a=="or")S.w.pk=[];
-else if(a=="oc"||a=="ok"){const s=S.w,it=s.l[s.n];const u=nzz(s.pk.map(j=>it.c[j]).join(""));s.res=a=="oc"&&[it.a,...it.alt].some(x=>nzz(x)==u);if(s.res)s.sc++;if(P.auto)say(it.a)}
+else if(a=="oc"||a=="ok"){const s=S.w,it=s.l[s.n];const u=nzz(s.pk.map(j=>it.c[j]).join(""));s.res=a=="oc"&&[it.a,...it.alt].some(x=>nzz(x)==u);if(s.res)s.sc++}
 else if(a=="on"){S.w.n++;S.w.pk=[];S.w.res=null;scrollTo(0,0)}
 render()}
 document.addEventListener("keydown",e=>{if(e.key=="Enter"&&e.target.id=="ti"){e.preventDefault();gAct("ts")}});
