@@ -368,7 +368,7 @@ speechSynthesis.speak(u)}
 /* ===== Trạng thái chung ===== */
 let S={tab:"card",i:0,fl:false,deck:[],q:null,g:null,w:null,f:""};
 const lvPool=()=>W;
-function mk(){S.deck=lvPool().filter(w=>!P.unk||!K.has(w.id));S.i=0;S.fl=false}
+function mk(){S.deck=lvPool().filter(w=>!P.unk||!K.has(w.id));S.i=Math.max(0,S.deck.findIndex(w=>w.i>=(P.pi||0)));S.fl=false}
 function topV(){const p=lvPool(),k=p.filter(w=>K.has(w.id)).length;
 $("pbar").style.width=(p.length?k/p.length*100:0)+"%";$("ptxt").textContent=`Đã nhớ ${k}/${p.length} từ`}
 function setV(){const sw=(k,t,d)=>`<button class="sw" role="switch" aria-checked="${!!P[k]}" data-a="pf" data-v="${k}"><span><b>${t}</b><small>${d}</small></span><i></i></button>`;
@@ -477,6 +477,7 @@ return `<div class="qhead"><button class="x" data-a="gx" aria-label="Thoát">${I
 
 /* ===== Điều khiển ===== */
 function render(){
+if(S.tab=="card"&&S.deck.length)P.pi=S.deck[S.i].i;P.tab=S.tab;svP();
 topV();document.querySelectorAll(".tabs button").forEach(b=>b.setAttribute("aria-selected",b.dataset.tab==S.tab));
 $("app").innerHTML=S.tab=="card"?cardV():S.tab=="quiz"?quizV():S.tab=="game"?gameV():S.tab=="list"?listV():gramV();
 const ti=$("ti");if(ti)ti.focus()}
@@ -517,6 +518,7 @@ let tx=null,ty=0;
 document.addEventListener("touchstart",e=>{const f=e.target.closest("#face");if(f){tx=e.touches[0].clientX;ty=e.touches[0].clientY}else tx=null},{passive:true});
 document.addEventListener("touchend",e=>{if(tx==null)return;const dx=e.changedTouches[0].clientX-tx,dy=e.changedTouches[0].clientY-ty;tx=null;
 if(Math.abs(dx)>70&&Math.abs(dy)<60){e.preventDefault();const f=$("face");if(f)f.classList.add(dx>0?"go-r":"go-l");setTimeout(()=>act(dx>0?"yes":"no"),140)}},{passive:false});
+if(["card","quiz","game","gram","list"].includes(P.tab))S.tab=P.tab;
 mk();render();
 </script>
 </body>
