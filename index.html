@@ -190,6 +190,10 @@ dialog h2{display:flex;justify-content:space-between;align-items:center}
 .sw i::after{content:"";position:absolute;top:3px;left:3px;width:22px;height:22px;border-radius:50%;background:#fff;transition:transform .2s;box-shadow:0 1px 2px rgba(0,0,0,.25)}
 .sw[aria-checked=true] i{background:var(--jade)}
 .sw[aria-checked=true] i::after{transform:translateX(18px)}
+.seg{display:grid;grid-template-columns:1fr 1fr;gap:4px;padding:4px;background:var(--sf);border:1px solid var(--ln);border-radius:12px;margin-bottom:14px}
+.seg button{height:38px;border:0;border-radius:9px;background:none;font-size:15px;font-weight:600;color:var(--mu)}
+.seg button b{display:inline-block;min-width:22px;padding:0 6px;margin-left:4px;border-radius:99px;background:var(--badt);color:var(--bad);font-size:13px}
+.seg [aria-pressed=true]{background:var(--jadet);color:var(--jade)}
 .danger{color:var(--bad);border-color:var(--bad);margin-top:14px}
 .empty{text-align:center;padding:40px 10px;color:var(--mu)}
 </style>
@@ -336,7 +340,9 @@ const sh=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const ld=(k,d)=>{try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}};
 const sv=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}};
-let K=new Set(ld("hsk3k30",[]));const save=()=>sv("hsk3k30",[...K]);
+let K=new Set(ld("hsk3k30",[])),N=new Set(ld("hsk3n",[]));const save=()=>{sv("hsk3k30",[...K]);sv("hsk3n",[...N])};
+const miss=id=>{K.delete(id);N.add(id);save()};
+const nw=()=>W.filter(w=>N.has(w.id));
 const P=Object.assign({slow:false,net:false,auto:true,dir:0,unk:false,lv:"3"},ld("hsk3p",{}));
 const svP=()=>sv("hsk3p",P);
 const IC={snd:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>',
@@ -368,22 +374,23 @@ speechSynthesis.speak(u)}
 /* ===== Trạng thái chung ===== */
 let S={tab:"card",i:0,fl:false,deck:[],q:null,g:null,w:null,f:""};
 const lvPool=()=>W;
-function mk(){S.deck=lvPool().filter(w=>!P.unk||!K.has(w.id));S.i=Math.max(0,S.deck.findIndex(w=>w.i>=(P.pi||0)));S.fl=false}
+function mk(){if(P.mode=="miss"){S.deck=nw();S.i=0}else{S.deck=lvPool().filter(w=>!P.unk||!K.has(w.id));S.i=Math.max(0,S.deck.findIndex(w=>w.i>=(P.pi||0)))}S.fl=false}
 function topV(){const p=lvPool(),k=p.filter(w=>K.has(w.id)).length;
-$("pbar").style.width=(p.length?k/p.length*100:0)+"%";$("ptxt").textContent=`Đã nhớ ${k}/${p.length} từ`}
+$("pbar").style.width=(p.length?k/p.length*100:0)+"%";$("ptxt").textContent=`Đã nhớ ${k}/${p.length} từ${N.size?`, chưa nhớ ${N.size}`:""}`}
 function setV(){const sw=(k,t,d)=>`<button class="sw" role="switch" aria-checked="${!!P[k]}" data-a="pf" data-v="${k}"><span><b>${t}</b><small>${d}</small></span><i></i></button>`;
 $("dlgc").innerHTML=`<h2>Cài đặt <button class="x" data-a="dlgx" aria-label="Đóng">${IC.x}</button></h2>
 <p class="lead" style="margin:10px 0 0">Âm thanh</p>${sw("auto","Tự đọc","Tự đọc từ vựng khi lật thẻ. Câu ví dụ chỉ đọc khi bạn bấm loa.")}${sw("slow","Đọc chậm","Giảm tốc độ đọc để nghe rõ thanh điệu.")}${sw("net","Giọng online","Bật khi máy không có giọng tiếng Trung. Cần mạng.")}
-<p class="lead" style="margin:16px 0 0">Thẻ từ</p>${sw("dir","Xem nghĩa tiếng Việt trước","Thẻ hiện nghĩa, bạn nhớ lại chữ Hán.")}${sw("unk","Chỉ ôn từ chưa nhớ","Ẩn các từ đã đánh dấu “Đã nhớ”.")}
+<p class="lead" style="margin:16px 0 0">Thẻ từ</p>${sw("dir","Xem nghĩa tiếng Việt trước","Thẻ hiện nghĩa, bạn nhớ lại chữ Hán.")}${sw("unk","Ẩn từ đã nhớ","Khi học tất cả, bỏ qua các từ đã đánh dấu “Đã nhớ”.")}
 <button class="btn danger" data-a="reset">Xóa tiến độ đã nhớ</button>`}
 
 /* ===== Thẻ từ ===== */
 function cardV(){
-if(!S.deck.length)return `<div class="empty"><p>Bạn đã nhớ hết ${W.length} từ.</p><button class="btn" data-a="unkoff">Ôn lại tất cả</button></div>`;
+const seg=`<div class="seg" role="group" aria-label="Chọn bộ thẻ"><button data-a="mode" data-v="all" aria-pressed="${P.mode!="miss"}">Tất cả từ</button><button data-a="mode" data-v="miss" aria-pressed="${P.mode=="miss"}">Chưa nhớ <b>${N.size}</b></button></div>`;
+if(!S.deck.length)return seg+(P.mode=="miss"?`<div class="empty"><p>Chưa có từ nào cần ôn lại.</p><p class="mu">Bấm “Chưa nhớ” trên thẻ, hoặc trả lời sai trong bài luyện tập, từ đó sẽ được đưa vào đây.</p><button class="btn" data-a="mode" data-v="all">Học tất cả từ</button></div>`:`<div class="empty"><p>Bạn đã nhớ hết ${W.length} từ.</p><button class="btn" data-a="unkoff">Ôn lại tất cả</button></div>`);
 const w=S.deck[S.i],r=S.fl;
 const top=P.dir==1&&!r?`<span class="vimain">${esc(w.v)}</span>`:tz(w.h);
 const sub=r?`<span class="py">${esc(w.p)}</span>${P.dir==1?"":`<span class="vi">${esc(w.v)}</span>`}`:`<span class="hint">Chạm để xem ${P.dir==1?"chữ Hán":"nghĩa"}</span>`;
-return `<div class="meta"><span>Thẻ ${S.i+1} / ${S.deck.length}</span></div>
+return seg+`<div class="meta"><span>${P.mode=="miss"?"Ôn từ chưa nhớ: ":"Thẻ "}${S.i+1} / ${S.deck.length}</span></div>
 <button class="face" id="face" data-a="flip" aria-live="polite">${top}${sub}</button>
 ${r&&w.e?`<div class="ex"><div><p class="zh">${esc(w.e)}</p><p class="mu">${esc(w.ev)}</p></div>${spk(w.e,"Nghe câu")}</div>`:""}
 <div class="acts"><button class="act no" data-a="no">Chưa nhớ</button><button class="act snd" data-a="say" data-t="${esc(w.h)}" aria-label="Nghe từ">${IC.snd}</button><button class="act yes" data-a="yes">Đã nhớ</button></div>
@@ -395,7 +402,7 @@ const wn=w=>`<p><span class="zh">${w.h}</span> <b style="color:var(--jade)">${es
 const fw=h=>W.find(w=>w.h==h);
 const oth=(w,f,n)=>{const s=new Set([f(w)]),r=[];for(const x of sh(W)){const v=f(x);if(!s.has(v)){s.add(v);r.push(v);if(r.length==n)break}}return r};
 const one=w=>[...w.h].length==1&&w.e&&w.e.split(w.h).length==2;
-function startQ(m,k){let list,P0=lvPool();if(P0.length<8)P0=W;
+function startQ(m,k){let list,P0=lvPool();if(k=="miss"){P0=nw();k=undefined;if(!P0.length)P0=W}else if(P0.length<8)P0=W;
 if(m=="v")list=sh(P0).slice(0,10).map(w=>({s:tz(w.h,"md")+`<p class="hint">Chọn nghĩa đúng</p>`,o:sh([w.v,...oth(w,x=>x.v,3)]),ok:w.v,n:wn(w),w,full:w.h}));
 else if(m=="l")list=sh(P0).slice(0,10).map(w=>({s:`<button class="bigspk" data-a="say" data-t="${esc(w.h)}" aria-label="Nghe lại"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg></button><p class="hint">Nghe rồi chọn từ đúng. Chạm loa để nghe lại.</p>`,o:sh([w.h,...oth(w,x=>x.h,3)]),ok:w.h,zo:1,two:1,n:wn(w),w,pre:w.h}));
 else if(m=="py"){const c=P0.filter(one),src=c.length>=10?c:W.filter(one);
@@ -405,9 +412,9 @@ else if(m=="g"){const src=k?Q.filter(x=>x[2]==k):Q;list=sh(src).slice(0,10).map(
 return{s:`<p class="s zh">${x[0].replace(/__/g,'<span class="blank">?</span>')}</p>`,sd:`<p class="s zh">${sd}</p>`,o:sh(x[1]),ok,zo:1,full:sd.replace(/<[^>]+>/g,""),g:g[1],n:`<p><b>${g[1]}</b></p><p class="fm">${esc(g[2])}</p>${g[3]?`<p class="mu">${esc(g[3])}</p>`:""}<p><span class="zh">${g[4][0][0]}</span><br><span class="mu">${g[4][0][1]}</span></p>`}})}
 else if(m=="f"){list=sh(FS).slice(0,2).flatMap(st=>{const ws=sh(st[0]),bank=`<div class="bank zh">${ws.map(x=>`<span>${x}</span>`).join("")}</div>`;return sh(st[1]).map(([s,a])=>{const w=fw(a);return{s:bank+`<p class="s zh">${s.replace("（　）",'<span class="blank">?</span>')}</p>`,sd:bank+`<p class="s zh">${s.replace("（　）",`<b>${a}</b>`)}</p>`,o:ws,ok:a,zo:1,two:1,full:s.replace("（　）",a),n:w?`<p><span class="zh">${w.h}</span> <b style="color:var(--jade)">${esc(w.p)}</b>: ${esc(w.v)}</p>`:"",w,g:s.replace("（　）",a)}})})}
 else if(m=="tf")list=sh(TF).slice(0,10).map(x=>({s:`<p class="psg zh">${x[0]} ${spk(x[0])}</p><p class="stm zh">★ ${x[1]}</p>`,o:["Đúng","Sai"],ok:x[2]?"Đúng":"Sai",two:1,n:`<p class="mu">${x[3]}</p>`,full:"",g:"★ "+x[1]}));
-S.q={m,k,list,n:0,sc:0,a:null,miss:[]}}
+S.q={m,k:S.qk,list,n:0,sc:0,a:null,miss:[]}}
 function menuV(){return `<h2>Luyện tập</h2><p class="lead">Các dạng bài theo đề thi HSK. Câu sai sẽ được đưa lại vào danh sách từ chưa nhớ.</p>
-<p class="grp">Từ vựng</p><div class="menu">${row("qs","v","义","Chọn nghĩa đúng","Nhìn chữ Hán, chọn nghĩa tiếng Việt.")}${row("qs","l","听","Nghe chọn từ","Nghe phát âm, chọn chữ Hán.")}${row("qs","py","音","Nhìn pinyin chọn chữ","Dạng 书写 phần 2: điền chữ Hán theo pinyin.")}</div>
+<p class="grp">Từ vựng</p><div class="menu">${N.size?row("qs","v","复",`Ôn ${N.size} từ chưa nhớ`,"Chọn nghĩa đúng, chỉ với các từ bạn chưa nhớ.",'data-k="miss"'):""}${row("qs","v","义","Chọn nghĩa đúng","Nhìn chữ Hán, chọn nghĩa tiếng Việt.")}${row("qs","l","听","Nghe chọn từ","Nghe phát âm, chọn chữ Hán.")}${row("qs","py","音","Nhìn pinyin chọn chữ","Dạng 书写 phần 2: điền chữ Hán theo pinyin.")}</div>
 <p class="grp">Ngữ pháp và đọc hiểu</p><div class="menu">${row("qs","g","法","Chọn từ đúng ngữ pháp","Điền từ còn thiếu vào câu.")}${row("qs","f","填","Chọn từ điền chỗ trống","Dạng 选词填空: 6 từ cho sẵn, 5 câu.")}${row("qs","tf","判","Đọc và phán đoán đúng sai","Dạng 判断: đọc đoạn văn, xét câu ★.")}</div>
 <p class="grp">Viết</p><div class="menu">${row("ws","o","排","Sắp xếp từ thành câu","Dạng 书写 phần 1: chạm các mảnh theo thứ tự.")}${row("ws","s","造","Đặt câu với từ cho sẵn","Tự viết rồi so với câu mẫu.")}</div>`}
 function quizV(){if(S.w)return wrV();const q=S.q;
@@ -439,12 +446,12 @@ function gramV(){return `<h2>Ngữ pháp</h2><p class="lead">${G.length} điểm
 const strip=s=>s.normalize("NFD").replace(/[̀-ͯ]/g,"").replace(/\s/g,"").toLowerCase();
 function listR(){const f=S.f.trim().toLowerCase(),nf=strip(f);
 let r=lvPool();if(f)r=r.filter(w=>w.h.includes(f)||w.v.toLowerCase().includes(f)||strip(w.p).includes(nf)||strip(w.v).includes(nf));
-return `<p class="mu" style="margin:0 0 8px">${r.length} từ${r.length>150?", hiện 150 từ đầu":""}</p><div class="menu">${r.slice(0,150).map(w=>`<div class="li"><span class="h zh">${w.h}</span><span class="t"><span class="p">${esc(w.p)}</span> ${esc(w.v)}${w.e?`<small class="zh">${esc(w.e)}</small><small>${esc(w.ev)}</small>`:""}</span>${spk(w.h)}</div>`).join("")||`<div class="empty">Không tìm thấy từ nào. Thử gõ pinyin không dấu, ví dụ “xuexi”.</div>`}</div>`}
+return `<p class="mu" style="margin:0 0 8px">${r.length} từ${r.length>150?", hiện 150 từ đầu":""}</p><div class="menu">${r.slice(0,150).map(w=>`<div class="li"><span class="h zh">${w.h}</span><span class="t"><span class="p">${esc(w.p)}</span> ${esc(w.v)}${N.has(w.id)?` <span class="tag">chưa nhớ</span>`:""}${w.e?`<small class="zh">${esc(w.e)}</small><small>${esc(w.ev)}</small>`:""}</span>${spk(w.h)}</div>`).join("")||`<div class="empty">Không tìm thấy từ nào. Thử gõ pinyin không dấu, ví dụ “xuexi”.</div>`}</div>`}
 function listV(){return `<div class="search"><input id="sf" class="inp" type="search" placeholder="Tìm chữ Hán, pinyin hoặc nghĩa" value="${esc(S.f)}" autocomplete="off" autocapitalize="none" spellcheck="false"></div><div id="lr">${listR()}</div>`}
 
 /* ===== Trò chơi ===== */
 let T=null;
-const pool=()=>{const u=lvPool().filter(w=>!K.has(w.id));return u.length>=12?u:lvPool().length>=12?lvPool():W};
+const pool=()=>{const n=nw();if(n.length>=12)return n;const u=lvPool().filter(w=>!K.has(w.id));return u.length>=12?u:lvPool().length>=12?lvPool():W};
 const nz=s=>s.normalize("NFD").replace(/[̀-ͯ]/g,"").replace(/[\s'’·]/g,"").toLowerCase();
 function sq(){const w=sh(pool())[0];return{w,ok:w.v,o:sh([w.v,...oth(w,x=>x.v,3)])}}
 function startG(m){const P0=pool();clearInterval(T);
@@ -459,9 +466,9 @@ if(tl.t=="h"&&P.auto)say(tl.x);
 if(g.sel==null)g.sel=i;else{g.tr++;const o=g.tl[g.sel];
 if(o.k==tl.k&&o.t!=tl.t){g.dn.add(i);g.dn.add(g.sel);g.sel=null}
 else{g.bad=[g.sel,i];g.sel=null;setTimeout(()=>{if(S.g==g){g.bad=null;render()}},600)}}}
-else if((a=="ts"||a=="tk")&&g&&g.m=="t"&&g.res==null){const w=g.l[g.n],ti=$("ti");const ok=a=="ts"&&ti&&nz(ti.value).replace(/v/g,"u")==nz(w.p);g.res=ok;if(ok)g.sc++;else{K.delete(w.id);save()}if(P.auto)say(w.h)}
+else if((a=="ts"||a=="tk")&&g&&g.m=="t"&&g.res==null){const w=g.l[g.n],ti=$("ti");const ok=a=="ts"&&ti&&nz(ti.value).replace(/v/g,"u")==nz(w.p);g.res=ok;if(ok)g.sc++;else{miss(w.id)}if(P.auto)say(w.h)}
 else if(a=="tn"&&g&&g.m=="t"){g.n++;g.res=null}
-else if(a=="sp"&&g&&g.m=="s"&&g.t>0){const it=g.it;if(it.o[+v]==it.ok){g.sc++;g.f="Đúng"}else{g.t=Math.max(0,g.t-3);K.delete(it.w.id);save();g.miss.push(it.w);g.f=`Sai: ${it.w.h} là “${it.ok}”. Trừ 3 giây.`}
+else if(a=="sp"&&g&&g.m=="s"&&g.t>0){const it=g.it;if(it.o[+v]==it.ok){g.sc++;g.f="Đúng"}else{g.t=Math.max(0,g.t-3);miss(it.w.id);g.miss.push(it.w);g.f=`Sai: ${it.w.h} là “${it.ok}”. Trừ 3 giây.`}
 g.it=sq();if(g.t<=0)clearInterval(T)}
 else return false;
 render();return true}
@@ -477,7 +484,7 @@ return `<div class="qhead"><button class="x" data-a="gx" aria-label="Thoát">${I
 
 /* ===== Điều khiển ===== */
 function render(){
-if(S.tab=="card"&&S.deck.length)P.pi=S.deck[S.i].i;P.tab=S.tab;svP();
+if(S.tab=="card"&&S.deck.length&&P.mode!="miss")P.pi=S.deck[S.i].i;P.tab=S.tab;svP();
 topV();document.querySelectorAll(".tabs button").forEach(b=>b.setAttribute("aria-selected",b.dataset.tab==S.tab));
 $("app").innerHTML=S.tab=="card"?cardV():S.tab=="quiz"?quizV():S.tab=="game"?gameV():S.tab=="list"?listV():gramV();
 const ti=$("ti");if(ti)ti.focus()}
@@ -486,15 +493,16 @@ function act(a,v,b){
 if(a=="say"){say(b.dataset.t);return}
 if(a=="pf"){P[v]=!P[v];if(v=="dir"){P.dir=P.dir?1:0;S.fl=false}svP();if(v=="unk")mk();setV();render();if(v=="net"||v=="slow")say("你好");return}
 if(a=="dlgx"){$("dlg").close();return}
-if(a=="reset"){if(confirm("Xóa toàn bộ tiến độ đã nhớ? Việc này không hoàn tác được.")){K.clear();save();mk();render()}return}
+if(a=="reset"){if(confirm("Xóa toàn bộ tiến độ (đã nhớ và chưa nhớ)? Việc này không hoàn tác được.")){K.clear();N.clear();save();mk();render()}return}
 if(a=="lv"){P.lv=v;svP();mk();S.q=null;S.g=null;S.w=null;clearInterval(T);setV();render();return}
 if(gAct(a,v))return;
 if(a=="unkoff"){P.unk=false;svP();mk()}
 else if(a=="flip"){S.fl=!S.fl;const w=S.deck[S.i];if(P.auto&&S.fl)say(w.h)}
-else if(a=="no"||a=="yes"){const w=S.deck[S.i];if(a=="no")K.delete(w.id);else K.add(w.id);save();if(P.unk&&a=="yes"){S.deck.splice(S.i,1);if(S.i>=S.deck.length)S.i=0;S.fl=false}else nextCard();if(P.auto&&P.dir==0&&S.deck.length)say(S.deck[S.i].h)}
-else if(a=="qs"){S.tab="quiz";S.w=null;startQ(v,b.dataset.k);curPre();scrollTo(0,0)}
+else if(a=="mode"){P.mode=v;svP();mk();if(P.auto&&S.deck.length&&P.dir==0)say(S.deck[S.i].h)}
+else if(a=="no"||a=="yes"){const w=S.deck[S.i];if(a=="no")miss(w.id);else{K.add(w.id);N.delete(w.id);save()}if((P.unk||P.mode=="miss")&&a=="yes"){S.deck.splice(S.i,1);if(S.i>=S.deck.length)S.i=0;S.fl=false}else nextCard();if(P.auto&&P.dir==0&&S.deck.length)say(S.deck[S.i].h)}
+else if(a=="qs"){S.tab="quiz";S.w=null;S.qk=b.dataset.k;startQ(v,b.dataset.k);curPre();scrollTo(0,0)}
 else if(a=="qx")S.q=null;
-else if(a=="pk"){const q=S.q,it=q.list[q.n];if(q.a!=null)return;q.a=+v;if(it.o[+v]==it.ok)q.sc++;else{q.miss.push(it.w?`<li><span class="zh">${it.w.h}</span><span>${esc(it.w.p)}, ${esc(it.w.v)}</span></li>`:`<li><span class="zh" style="font-weight:400;font-size:17px">${esc(it.g||"")}</span></li>`);if(it.w){K.delete(it.w.id);save()}}
+else if(a=="pk"){const q=S.q,it=q.list[q.n];if(q.a!=null)return;q.a=+v;if(it.o[+v]==it.ok)q.sc++;else{q.miss.push(it.w?`<li><span class="zh">${it.w.h}</span><span>${esc(it.w.p)}, ${esc(it.w.v)}</span></li>`:`<li><span class="zh" style="font-weight:400;font-size:17px">${esc(it.g||"")}</span></li>`);if(it.w){miss(it.w.id)}}
 if(P.auto&&it.w&&it.full==it.w.h)say(it.full)}
 else if(a=="nx"){S.q.n++;S.q.a=null;curPre();scrollTo(0,0)}
 else if(a=="ws"){S.tab="quiz";S.q=null;startW(v);if(P.auto&&S.w.m=="s")say(S.w.w.h);scrollTo(0,0)}
