@@ -12,7 +12,7 @@
 <meta name="theme-color" content="#121517" media="(prefers-color-scheme: dark)">
 <title>Học tiếng Trung</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Noto+Sans+SC:wght@500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Noto+Serif+SC:wght@400&display=swap">
 <style>
 :root{--paper:#F4F6F3;--sf:#FFFFFF;--ink:#1C2126;--mu:#68727B;--ln:#DCE1DB;--grid:#D4574C;--gridl:rgba(212,87,76,.38);--jade:#1E6B5A;--jadet:#E2EFEA;--onj:#FFFFFF;--bad:#B93A2E;--badt:#FAE6E3;--okt:#E2EFEA;
 --r1:8px;--r2:14px;--nav:64px;color-scheme:light}
@@ -21,7 +21,7 @@
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html,body{margin:0}
 body{background:var(--paper);color:var(--ink);font:17px/1.55 "Be Vietnam Pro",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
-.zh{font-family:"Noto Sans SC","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif}
+.zh{font-family:"Noto Serif SC","Songti SC","SimSun","STSong",serif}
 button,input,select,textarea{font:inherit;color:inherit}
 button{cursor:pointer}
 :focus-visible{outline:3px solid var(--jade);outline-offset:2px}
@@ -57,7 +57,7 @@ main{max-width:600px;margin:0 auto;padding:16px 16px calc(var(--nav) + env(safe-
 .tzrow.sm .tg{border-width:1.5px}
 .tg svg{position:absolute;inset:0;width:100%;height:100%}
 .tg path{stroke:var(--gridl);stroke-width:1;stroke-dasharray:4 4;vector-effect:non-scaling-stroke;fill:none}
-.tg b{position:relative;font-size:calc(var(--s) * .74);line-height:1;font-weight:500}
+.tg b{position:relative;font-size:calc(var(--s) * .74);line-height:1;font-weight:400}
 
 /* Thẻ từ */
 .meta{display:flex;justify-content:space-between;align-items:center;color:var(--mu);font-size:14px;margin-bottom:10px}
@@ -134,7 +134,7 @@ h2{font-size:22px;margin:4px 0 4px;font-weight:700}
 .miss{list-style:none;padding:0;margin:14px 0 0;background:var(--sf);border:1px solid var(--ln);border-radius:var(--r2)}
 .miss li{padding:10px 14px;border-top:1px solid var(--ln);display:flex;gap:10px;align-items:baseline}
 .miss li:first-child{border-top:0}
-.miss .zh{font-size:20px;font-weight:700}
+.miss .zh{font-size:20px;font-weight:400}
 
 /* Sắp xếp câu */
 .ans{min-height:64px;display:flex;flex-wrap:wrap;align-content:flex-start;gap:6px;padding:10px;border:2px dashed var(--ln);border-radius:var(--r2);margin-bottom:14px;background:var(--sf)}
@@ -172,7 +172,7 @@ details>div{padding:0 16px 16px}
 /* Trò chơi */
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
 .tile{min-height:76px;padding:8px;border:1.5px solid var(--ln);border-radius:var(--r2);background:var(--sf);font-size:15px}
-.tile.zh{font-size:26px;font-weight:700}
+.tile.zh{font-size:26px;font-weight:400}
 .tile.sel{border-color:var(--jade);box-shadow:0 0 0 2px var(--jade) inset}
 .tile.done{background:var(--okt);border-color:var(--jade);opacity:.6}
 .tile.bad{background:var(--badt);border-color:var(--bad)}
