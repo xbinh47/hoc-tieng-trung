@@ -1,0 +1,57 @@
+# Audio credits
+
+Single-syllable Mandarin recordings from Wikimedia Commons (Shtooka Project collection), converted to MP3.
+
+- `a5.mp3` (a): [File:Zh-a.ogg](https://commons.wikimedia.org/wiki/File:Zh-a.ogg), Wei Gao, Vion Nicolas, CC BY 2.0 fr
+- `ba5.mp3` (ba): [File:Zh-ba.ogg](https://commons.wikimedia.org/wiki/File:Zh-ba.ogg), Yue Tan, CC BY-SA 3.0 us
+- `ban4.mp3` (bàn): [File:Zh-bàn.ogg](https://commons.wikimedia.org/wiki/File:Zh-b%C3%A0n.ogg), Wei Gao, Vion Nicolas, CC BY 2.0 fr
+- `bian1.mp3` (biān): [File:Zh-biān.ogg](https://commons.wikimedia.org/wiki/File:Zh-bi%C4%81n.ogg), Wei Gao, Vion Nicolas, CC BY 2.0 fr
+- `bing4.mp3` (bìng): [File:Zh-bìng.ogg](https://commons.wikimedia.org/wiki/File:Zh-b%C3%ACng.ogg), Wei Gao, Vion Nicolas, CC BY 2.0 fr
+- `cha4.mp3` (chà): [File:Zh-chà.ogg](https://commons.wikimedia.org/wiki/File:Zh-ch%C3%A0.ogg), Wei Gao, Vion Nicolas, CC BY 2.0 fr
+- `chang2.mp3` (cháng): [File:Zh-cháng.ogg](https://commons.wikimedia.org/wiki/File:Zh-ch%C3%A1ng.ogg), Wei Gao, Vion Nicolas, CC BY 2.0 fr
+- `che1.mp3` (chē): [File:Zh-chē.ogg](https://commons.wikimedia.org/wiki/File:Zh-ch%C4%93.ogg), Wei Gao, Vion Nicolas, CC BY 2.0 fr
+- `da4.mp3` (dà): [File:Zh-dà.ogg](https://commons.wikimedia.org/wiki/File:Zh-d%C3%A0.ogg), Wei Gao, Vion Nicolas, CC BY 2.0 fr
+- `de2.mp3` (dé): [File:Zh-dé.ogg](https://commons.wikimedia.org/wiki/File:Zh-d%C3%A9.ogg), Wei Gao, Vion Nicolas, CC BY 2.0 fr
+- `de5.mp3` (de): [File:Zh-de.ogg](https://commons.wikimedia.org/wiki/File:Zh-de.ogg), Wei Gao, Vion Nicolas, CC BY 2.0 fr
+- `dei3.mp3` (děi): [File:Zh-děi.ogg](https://commons.wikimedia.org/wiki/File:Zh-d%C4%9Bi.ogg), Wei Gao, Vion Nicolas, CC BY 2.0 fr
+- `di4.mp3` (dì): [File:Zh-dì.ogg](https://commons.wikimedia.org/wiki/File:Zh-d%C3%AC.ogg), Wei Gao, Vion Nicolas, CC BY 2.0 fr
+- `dou1.mp3` (dōu): [File:Zh-dōu.ogg](https://commons.wikimedia.org/wiki/File:Zh-d%C5%8Du.ogg), Wei Gao, Vion Nicolas, CC BY 2.0 fr
+- `fa1.mp3` (fā): [File:Zh-fā.ogg](https://commons.wikimedia.org/wiki/File:Zh-f%C4%81.ogg), Wei Gao, Vion Nicolas, CC BY 2.0 fr
+- `fen1.mp3` (fēn): [File:Zh-fēn.ogg](https://commons.wikimedia.org/wiki/File:Zh-f%C4%93n.ogg), Wei Gao, Vion Nicolas, CC BY 2.0 fr
+- `gan4.mp3` (gàn): [File:Zh-gàn.ogg](https://commons.wikimedia.org/wiki/File:Zh-g%C3%A0n.ogg), Wei Gao, Vion Nicolas, CC BY 2.0 fr
+- `guo4.mp3` (guò): [File:Zh-guò.ogg](https://commons.wikimedia.org/wiki/File:Zh-gu%C3%B2.ogg), Wei Gao, Vion Nicolas, CC BY 2.0 fr
+- `guo5.mp3` (guo): [File:Zh-guo.ogg](https://commons.wikimedia.org/wiki/File:Zh-guo.ogg), Yue Tan, CC BY-SA 3.0 us
+- `hai2.mp3` (hái): [File:Zh-hái.ogg](https://commons.wikimedia.org/wiki/File:Zh-h%C3%A1i.ogg), Wei Gao, Vion Nicolas, CC BY 2.0 fr
+- `hao3.mp3` (hǎo): [File:Zh-hǎo.ogg](https://commons.wikimedia.org/wiki/File:Zh-h%C7%8Eo.ogg), Wei Gao, Vion Nicolas, CC BY 2.0 fr
+- `hao4.mp3` (hào): [File:Zh-hào.ogg](https://commons.wikimedia.org/wiki/File:Zh-h%C3%A0o.ogg), Wei Gao, Vion Nicolas, CC BY 2.0 fr
+- `he2.mp3` (hé): [File:Zh-hé.ogg](https://commons.wikimedia.org/wiki/File:Zh-h%C3%A9.ogg), Wei Gao, Vion Nicolas, CC BY 2.0 fr
+- `huan2.mp3` (huán): [File:Zh-huán.ogg](https://commons.wikimedia.org/wiki/File:Zh-hu%C3%A1n.ogg), Yue Tan, CC BY-SA 3.0 us
+- `hui4.mp3` (huì): [File:Zh-huì.ogg](https://commons.wikimedia.org/wiki/File:Zh-hu%C3%AC.ogg), Wei Gao, Vion Nicolas, CC BY 2.0 fr
+- `ji3.mp3` (jǐ): [File:Zh-jǐ.ogg](https://commons.wikimedia.org/wiki/File:Zh-j%C7%90.ogg), Wei Gao, Vion Nicolas, CC BY 2.0 fr
+- `jian1.mp3` (jiān): [File:Zh-jiān.ogg](https://commons.wikimedia.org/wiki/File:Zh-ji%C4%81n.ogg), Wei Gao, Vion Nicolas, CC BY 2.0 fr
+- `jiao1.mp3` (jiāo): [File:Zh-jiāo.ogg](https://commons.wikimedia.org/wiki/File:Zh-ji%C4%81o.ogg), Wei Gao, Vion Nicolas, CC BY 2.0 fr
+- `jiao3.mp3` (jiǎo): [File:Zh-jiǎo.ogg](https://commons.wikimedia.org/wiki/File:Zh-ji%C7%8Eo.ogg), Wei Gao, Vion Nicolas, CC BY 2.0 fr
+- `kan4.mp3` (kàn): [File:Zh-kàn.ogg](https://commons.wikimedia.org/wiki/File:Zh-k%C3%A0n.ogg), Wei Gao, Vion Nicolas, CC BY 2.0 fr
+- `le5.mp3` (le): [File:Zh-le.ogg](https://commons.wikimedia.org/wiki/File:Zh-le.ogg), Wei Gao, Vion Nicolas, CC BY 2.0 fr
+- `lei4.mp3` (lèi): [File:Zh-lèi.ogg](https://commons.wikimedia.org/wiki/File:Zh-l%C3%A8i.ogg), Wei Gao, Vion Nicolas, CC BY 2.0 fr
+- `ma5.mp3` (ma): [File:Zh-ma.ogg](https://commons.wikimedia.org/wiki/File:Zh-ma.ogg), Wei Gao, Vion Nicolas, CC BY 2.0 fr
+- `men5.mp3` (men): [File:Zh-men.ogg](https://commons.wikimedia.org/wiki/File:Zh-men.ogg), Wei Gao, Vion Nicolas, CC BY 2.0 fr
+- `na3.mp3` (nǎ): [File:Zh-nǎ.ogg](https://commons.wikimedia.org/wiki/File:Zh-n%C7%8E.ogg), Wei Gao, Vion Nicolas, CC BY 2.0 fr
+- `na4.mp3` (nà): [File:Zh-nà.ogg](https://commons.wikimedia.org/wiki/File:Zh-n%C3%A0.ogg), Wei Gao, Vion Nicolas, CC BY 2.0 fr
+- `nan2.mp3` (nán): [File:Zh-nán.ogg](https://commons.wikimedia.org/wiki/File:Zh-n%C3%A1n.ogg), Wei Gao, Vion Nicolas, CC BY 2.0 fr
+- `ne5.mp3` (ne): [File:Zh-ne.ogg](https://commons.wikimedia.org/wiki/File:Zh-ne.ogg), Wei Gao, Vion Nicolas, CC BY 2.0 fr
+- `shang4.mp3` (shàng): [File:Zh-shàng.ogg](https://commons.wikimedia.org/wiki/File:Zh-sh%C3%A0ng.ogg), Wei Gao, Vion Nicolas, CC BY 2.0 fr
+- `shao3.mp3` (shǎo): [File:Zh-shǎo.ogg](https://commons.wikimedia.org/wiki/File:Zh-sh%C7%8Eo.ogg), Wei Gao, Vion Nicolas, CC BY 2.0 fr
+- `shuo1.mp3` (shuō): [File:Zh-shuō.ogg](https://commons.wikimedia.org/wiki/File:Zh-shu%C5%8D.ogg), Wei Gao, Vion Nicolas, CC BY 2.0 fr
+- `wei4.mp3` (wèi): [File:Zh-wèi.ogg](https://commons.wikimedia.org/wiki/File:Zh-w%C3%A8i.ogg), Wei Gao, Vion Nicolas, CC BY 2.0 fr
+- `xing2.mp3` (xíng): [File:Zh-xíng.ogg](https://commons.wikimedia.org/wiki/File:Zh-x%C3%ADng.ogg), Wei Gao, Vion Nicolas, CC BY 2.0 fr
+- `yao4.mp3` (yào): [File:Zh-yào.ogg](https://commons.wikimedia.org/wiki/File:Zh-y%C3%A0o.ogg), Wei Gao, Vion Nicolas, CC BY 2.0 fr
+- `yi1.mp3` (yī): [File:Zh-yī.ogg](https://commons.wikimedia.org/wiki/File:Zh-y%C4%AB.ogg), Wei Gao, Vion Nicolas, CC BY 2.0 fr
+- `zhang3.mp3` (zhǎng): [File:Zh-zhǎng.ogg](https://commons.wikimedia.org/wiki/File:Zh-zh%C7%8Eng.ogg), Wei Gao, Vion Nicolas, CC BY 2.0 fr
+- `zhe5.mp3` (zhe): [File:Zh-zhe.ogg](https://commons.wikimedia.org/wiki/File:Zh-zhe.ogg), Wei Gao, Vion Nicolas, CC BY 2.0 fr
+- `zheng4.mp3` (zhèng): [File:Zh-zhèng.ogg](https://commons.wikimedia.org/wiki/File:Zh-zh%C3%A8ng.ogg), Wei Gao, Vion Nicolas, CC BY 2.0 fr
+- `zhi1.mp3` (zhī): [File:Zh-zhī.ogg](https://commons.wikimedia.org/wiki/File:Zh-zh%C4%AB.ogg), Xudong Yang, CC BY 2.0
+- `zhi3.mp3` (zhǐ): [File:Zh-zhǐ.ogg](https://commons.wikimedia.org/wiki/File:Zh-zh%C7%90.ogg), Wei Gao, Vion Nicolas, CC BY 2.0 fr
+- `zhong1.mp3` (zhōng): [File:Zh-zhōng.ogg](https://commons.wikimedia.org/wiki/File:Zh-zh%C5%8Dng.ogg), Wei Gao, Vion Nicolas, CC BY 2.0 fr
+- `zhong3.mp3` (zhǒng): [File:Zh-zhǒng.ogg](https://commons.wikimedia.org/wiki/File:Zh-zh%C7%92ng.ogg), Yue Tan, CC BY 2.0 fr
+- `zi5.mp3` (zi): [File:Zh-zǐ.oga](https://commons.wikimedia.org/wiki/File:Zh-z%C7%90.oga), Yue Tan, CC BY-SA 3.0 us
