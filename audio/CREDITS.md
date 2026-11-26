@@ -1,14 +1,14 @@
 # Audio credits
 
-Mandarin pronunciation recordings (727 unique clips covering 784/1000 HSK 1–3 entries) from Wikimedia Commons (Shtooka Project collection + `File:Zh-zhī.ogg`), converted to MP3 (`22050 Hz`, mono, `40 kbps`).
+Mandarin pronunciation audio covering **100% (1000/1000)** of the HSK 1–3 vocabulary list (943 unique clips, MP3 `22050 Hz`, mono, `40 kbps`):
 
-- **Wei Gao, Vion Nicolas (Shtooka Project)**: CC BY 2.0 FR
-- **Yue Tan (Shtooka Project)**: CC BY-SA 3.0 US
-- **Xudong Yang**: CC BY 2.0 (`File:Zh-zhī.ogg`)
+- **Wikimedia Commons — Shtooka Project** (728 clips): Wei Gao & Vion Nicolas (`CC BY 2.0 FR`), Yue Tan (`CC BY-SA 3.0 US`), plus `File:Zh-zhī.ogg` by Xudong Yang (`CC BY 2.0`).
+- **Wikimedia Commons — Lingua Libre & Chinese pronunciation** (49 clips): Luilui6666 (`CC BY-SA 4.0`), CanonNi (`CC0`), and Wikimedia Commons (`CC BY-SA`).
+- **Qwen3-TTS 1.7B CustomVoice (`Serena`)** (166 clips): generated locally via `mlx-community/Qwen3-TTS-12Hz-1.7B-CustomVoice-8bit` (`Apache 2.0`).
 
-42 multi-reading & neutral-tone syllables are embedded inline as base64 in `index.html` / `hsk3-on-tap.html` for standalone offline use; the remaining 685 clips are stored in `audio/*.mp3`.
+44 multi-reading and neutral-tone syllables (including `过 guo` and `子 zi`) are embedded inline as base64 in `index.html` / `hsk3-on-tap.html` for standalone offline use; the remaining 899 clips are stored in `audio/*.mp3`.
 
-## Files
+## Wikimedia Commons — Shtooka Project (728)
 
 - inline `REC["a"]` (啊 a): [File:Zh-a.ogg](https://commons.wikimedia.org/wiki/File:Zh-a.ogg), Wei Gao, Vion Nicolas, CC BY 2.0 fr
 - `audio/a1nji4ng.mp3` (安静 ānjìng): [File:Zh-ānjìng.ogg](https://commons.wikimedia.org/wiki/File:Zh-%C4%81nj%C3%ACng.ogg), Wei Gao, Vion Nicolas, CC BY 2.0 fr
@@ -721,6 +721,7 @@ Mandarin pronunciation recordings (727 unique clips covering 784/1000 HSK 1–3 
 - `audio/zhu4.mp3` (住 zhù): [File:Zh-zhù.ogg](https://commons.wikimedia.org/wiki/File:Zh-zh%C3%B9.ogg), Wei Gao, Vion Nicolas, CC BY 2.0 fr
 - `audio/zhu4yi4.mp3` (注意 zhùyì): [File:Zh-zhùyì.ogg](https://commons.wikimedia.org/wiki/File:Zh-zh%C3%B9y%C3%AC.ogg), Wei Gao, Vion Nicolas, CC BY 2.0 fr
 - `audio/zhuo1zi.mp3` (桌子 zhuōzi): [File:Zh-zhuōzi.ogg](https://commons.wikimedia.org/wiki/File:Zh-zhu%C5%8Dzi.ogg), Wei Gao, Vion Nicolas, CC BY 2.0 fr
+- inline `REC["zi"]` (子 zi): [File:Zh-bēizi.ogg](https://commons.wikimedia.org/wiki/File:Zh-b%C4%93izi.ogg), Wei Gao, Vion Nicolas (neutral syllable extracted from 杯子), CC BY 2.0 fr
 - `audio/zi4.mp3` (字 zì): [File:Zh-zì.ogg](https://commons.wikimedia.org/wiki/File:Zh-z%C3%AC.ogg), Wei Gao, Vion Nicolas, CC BY 2.0 fr
 - `audio/zi4dia3n.mp3` (字典 zìdiǎn): [File:Zh-zìdian.ogg](https://commons.wikimedia.org/wiki/File:Zh-z%C3%ACdian.ogg), Yue Tan, CC BY-SA 3.0 us
 - `audio/zi4ji3.mp3` (自己 zìjǐ): [File:Zh-zìjǐ.ogg](https://commons.wikimedia.org/wiki/File:Zh-z%C3%ACj%C7%90.ogg), Wei Gao, Vion Nicolas, CC BY 2.0 fr
@@ -737,3 +738,224 @@ Mandarin pronunciation recordings (727 unique clips covering 784/1000 HSK 1–3 
 - `audio/zuo3.mp3` (左 zuǒ): [File:Zh-zuǒ.ogg](https://commons.wikimedia.org/wiki/File:Zh-zu%C7%92.ogg), Wei Gao, Vion Nicolas, CC BY 2.0 fr
 - `audio/zuo4.mp3` (坐 zuò, 做 zuò): [File:Zh-zuò.ogg](https://commons.wikimedia.org/wiki/File:Zh-zu%C3%B2.ogg), Wei Gao, Vion Nicolas, CC BY 2.0 fr
 - `audio/zuo4ye4.mp3` (作业 zuòyè): [File:Zh-zuòyè.ogg](https://commons.wikimedia.org/wiki/File:Zh-zu%C3%B2y%C3%A8.ogg), Wei Gao, Vion Nicolas, CC BY 2.0 fr
+
+## Wikimedia Commons — Lingua Libre & extras (49)
+
+- `audio/bi1ng.mp3` (冰 bīng): [File:Zh-bing1.ogg](https://commons.wikimedia.org/wiki/File:Zh-bing1.ogg), Wikimedia Commons, CC BY-SA 2.0 uk
+- `audio/bi1ngji1li2ng.mp3` (冰激凌 bīngjīlíng): [File:LL-Q9192 (cmn)-CanonNi-冰激凌.wav](https://commons.wikimedia.org/wiki/File:LL-Q9192_%28cmn%29-CanonNi-%E5%86%B0%E6%BF%80%E5%87%8C.wav), CanonNi (Lingua Libre), CC0
+- `audio/bi1ngxia1ng.mp3` (冰箱 bīngxiāng): [File:LL-Q9192 (cmn)-CanonNi-冰箱.wav](https://commons.wikimedia.org/wiki/File:LL-Q9192_%28cmn%29-CanonNi-%E5%86%B0%E7%AE%B1.wav), CanonNi (Lingua Libre), CC0
+- `audio/bi3ji4.mp3` (笔记 bǐjì): [File:LL-Q9192 (cmn)-Luilui6666-笔记.wav](https://commons.wikimedia.org/wiki/File:LL-Q9192_%28cmn%29-Luilui6666-%E7%AC%94%E8%AE%B0.wav), Luilui6666 (Lingua Libre), CC BY-SA 4.0
+- `audio/bi3ji4be3n.mp3` (笔记本 bǐjìběn): [File:LL-Q9192 (cmn)-Luilui6666-笔记本.wav](https://commons.wikimedia.org/wiki/File:LL-Q9192_%28cmn%29-Luilui6666-%E7%AC%94%E8%AE%B0%E6%9C%AC.wav), Luilui6666 (Lingua Libre), CC BY-SA 4.0
+- `audio/bu2_ke4qi.mp3` (不客气 bú kèqi): [File:LL-Q9192 (cmn)-Luilui6666-不客气.wav](https://commons.wikimedia.org/wiki/File:LL-Q9192_%28cmn%29-Luilui6666-%E4%B8%8D%E5%AE%A2%E6%B0%94.wav), Luilui6666 (Lingua Libre), CC BY-SA 4.0
+- `audio/cha4buduo1.mp3` (差不多 chàbuduō): [File:LL-Q9192 (cmn)-CanonNi-差不多.wav](https://commons.wikimedia.org/wiki/File:LL-Q9192_%28cmn%29-CanonNi-%E5%B7%AE%E4%B8%8D%E5%A4%9A.wav), CanonNi (Lingua Libre), CC0
+- `audio/chu1zu1che1.mp3` (出租车 chūzūchē): [File:LL-Q9192 (cmn)-CanonNi-出租车.wav](https://commons.wikimedia.org/wiki/File:LL-Q9192_%28cmn%29-CanonNi-%E5%87%BA%E7%A7%9F%E8%BD%A6.wav), CanonNi (Lingua Libre), CC0
+- `audio/da3_dia4nhua4.mp3` (打电话 dǎ diànhuà): [File:LL-Q9192 (cmn)-CanonNi-打电话.wav](https://commons.wikimedia.org/wiki/File:LL-Q9192_%28cmn%29-CanonNi-%E6%89%93%E7%94%B5%E8%AF%9D.wav), CanonNi (Lingua Libre), CC0
+- `audio/da4nga1o.mp3` (蛋糕 dàngāo): [File:LL-Q9192 (cmn)-Luilui6666-蛋糕.wav](https://commons.wikimedia.org/wiki/File:LL-Q9192_%28cmn%29-Luilui6666-%E8%9B%8B%E7%B3%95.wav), Luilui6666 (Lingua Libre), CC BY-SA 4.0
+- `audio/da4yi1.mp3` (大衣 dàyī): [File:LL-Q9192 (cmn)-Luilui6666-大衣.wav](https://commons.wikimedia.org/wiki/File:LL-Q9192_%28cmn%29-Luilui6666-%E5%A4%A7%E8%A1%A3.wav), Luilui6666 (Lingua Libre), CC BY-SA 4.0
+- `audio/di4dia3n.mp3` (地点 dìdiǎn): [File:LL-Q9192 (cmn)-Luilui6666-地点.wav](https://commons.wikimedia.org/wiki/File:LL-Q9192_%28cmn%29-Luilui6666-%E5%9C%B0%E7%82%B9.wav), Luilui6666 (Lingua Libre), CC BY-SA 4.0
+- `audio/fe1nka1i.mp3` (分开 fēnkāi): [File:LL-Q9192 (cmn)-Luilui6666-分开.wav](https://commons.wikimedia.org/wiki/File:LL-Q9192_%28cmn%29-Luilui6666-%E5%88%86%E5%BC%80.wav), Luilui6666 (Lingua Libre), CC BY-SA 4.0
+- `audio/go1ngsi1.mp3` (公司 gōngsī): [File:LL-Q9192 (cmn)-Luilui6666-公司.wav](https://commons.wikimedia.org/wiki/File:LL-Q9192_%28cmn%29-Luilui6666-%E5%85%AC%E5%8F%B8.wav), Luilui6666 (Lingua Libre), CC BY-SA 4.0
+- `audio/go3u.mp3` (狗 gǒu): [File:LL-Q9192 (cmn)-Luilui6666-狗.wav](https://commons.wikimedia.org/wiki/File:LL-Q9192_%28cmn%29-Luilui6666-%E7%8B%97.wav), Luilui6666 (Lingua Libre), CC BY-SA 4.0
+- `audio/ha3ojiu3.mp3` (好久 hǎojiǔ): [File:LL-Q9192 (cmn)-Luilui6666-好久.wav](https://commons.wikimedia.org/wiki/File:LL-Q9192_%28cmn%29-Luilui6666-%E5%A5%BD%E4%B9%85.wav), Luilui6666 (Lingua Libre), CC BY-SA 4.0
+- `audio/ho2ngse4.mp3` (红色 hóngsè): [File:LL-Q9192 (cmn)-Luilui6666-红色.wav](https://commons.wikimedia.org/wiki/File:LL-Q9192_%28cmn%29-Luilui6666-%E7%BA%A2%E8%89%B2.wav), Luilui6666 (Lingua Libre), CC BY-SA 4.0
+- `audio/ho4utia1n.mp3` (后天 hòutiān): [File:Zh-hou4tian1.ogg](https://commons.wikimedia.org/wiki/File:Zh-hou4tian1.ogg), Wikimedia Commons, CC BY-SA 3.0
+- `audio/hua4jia1.mp3` (画家 huàjiā): [File:LL-Q9192 (cmn)-Luilui6666-画家.wav](https://commons.wikimedia.org/wiki/File:LL-Q9192_%28cmn%29-Luilui6666-%E7%94%BB%E5%AE%B6.wav), Luilui6666 (Lingua Libre), CC BY-SA 4.0
+- `audio/huo4.mp3` (或 huò): [File:LL-Q9192 (cmn)-Luilui6666-或.wav](https://commons.wikimedia.org/wiki/File:LL-Q9192_%28cmn%29-Luilui6666-%E6%88%96.wav), Luilui6666 (Lingua Libre), CC BY-SA 4.0
+- `audio/jia1re2n.mp3` (家人 jiārén): [File:LL-Q9192 (cmn)-Luilui6666-家人.wav](https://commons.wikimedia.org/wiki/File:LL-Q9192_%28cmn%29-Luilui6666-%E5%AE%B6%E4%BA%BA.wav), Luilui6666 (Lingua Libre), CC BY-SA 4.0
+- `audio/ka1iche1.mp3` (开车 kāichē): [File:LL-Q9192 (cmn)-Luilui6666-开车.wav](https://commons.wikimedia.org/wiki/File:LL-Q9192_%28cmn%29-Luilui6666-%E5%BC%80%E8%BD%A6.wav), Luilui6666 (Lingua Libre), CC BY-SA 4.0
+- `audio/ke4re2n.mp3` (客人 kèrén): [File:LL-Q9192 (cmn)-Luilui6666-客人.wav](https://commons.wikimedia.org/wiki/File:LL-Q9192_%28cmn%29-Luilui6666-%E5%AE%A2%E4%BA%BA.wav), Luilui6666 (Lingua Libre), CC BY-SA 4.0
+- `audio/kua4ngqua2nshui3.mp3` (矿泉水 kuàngquánshuǐ): [File:LL-Q9192 (cmn)-CanonNi-矿泉水.wav](https://commons.wikimedia.org/wiki/File:LL-Q9192_%28cmn%29-CanonNi-%E7%9F%BF%E6%B3%89%E6%B0%B4.wav), CanonNi (Lingua Libre), CC0
+- `audio/li3mia4n.mp3` (里面 lǐmiàn): [File:LL-Q9192 (cmn)-Luilui6666-里面.wav](https://commons.wikimedia.org/wiki/File:LL-Q9192_%28cmn%29-Luilui6666-%E9%87%8C%E9%9D%A2.wav), Luilui6666 (Lingua Libre), CC BY-SA 4.0
+- `audio/lv4cha2.mp3` (绿茶 lǜchá): [File:LL-Q9192 (cmn)-Luilui6666-绿茶.wav](https://commons.wikimedia.org/wiki/File:LL-Q9192_%28cmn%29-Luilui6666-%E7%BB%BF%E8%8C%B6.wav), Luilui6666 (Lingua Libre), CC BY-SA 4.0
+- `audio/na2nfa1ng.mp3` (南方 nánfāng): [File:LL-Q9192 (cmn)-Luilui6666-南方.wav](https://commons.wikimedia.org/wiki/File:LL-Q9192_%28cmn%29-Luilui6666-%E5%8D%97%E6%96%B9.wav), Luilui6666 (Lingua Libre), CC BY-SA 4.0
+- `audio/ni3_ha3o.mp3` (你好 nǐ hǎo): [File:LL-Q9192 (cmn)-Luilui6666-你好.wav](https://commons.wikimedia.org/wiki/File:LL-Q9192_%28cmn%29-Luilui6666-%E4%BD%A0%E5%A5%BD.wav), Luilui6666 (Lingua Libre), CC BY-SA 4.0
+- `audio/qia2nmia4n.mp3` (前面 qiánmiàn): [File:LL-Q9192 (cmn)-Luilui6666-前面.wav](https://commons.wikimedia.org/wiki/File:LL-Q9192_%28cmn%29-Luilui6666-%E5%89%8D%E9%9D%A2.wav), Luilui6666 (Lingua Libre), CC BY-SA 4.0
+- `audio/ru2guo3.mp3` (如果 rúguǒ): [File:LL-Q9192 (cmn)-Luilui6666-如果.wav](https://commons.wikimedia.org/wiki/File:LL-Q9192_%28cmn%29-Luilui6666-%E5%A6%82%E6%9E%9C.wav), Luilui6666 (Lingua Libre), CC BY-SA 4.0
+- `audio/sha4ngmia4n.mp3` (上面 shàngmiàn): [File:LL-Q9192 (cmn)-Luilui6666-上面.wav](https://commons.wikimedia.org/wiki/File:LL-Q9192_%28cmn%29-Luilui6666-%E4%B8%8A%E9%9D%A2.wav), Luilui6666 (Lingua Libre), CC BY-SA 4.0
+- `audio/sha4ngwa3ng.mp3` (上网 shàngwǎng): [File:LL-Q9192 (cmn)-Luilui6666-上网.wav](https://commons.wikimedia.org/wiki/File:LL-Q9192_%28cmn%29-Luilui6666-%E4%B8%8A%E7%BD%91.wav), Luilui6666 (Lingua Libre), CC BY-SA 4.0
+- `audio/sho3uji1.mp3` (手机 shǒujī): [File:LL-Q9192 (cmn)-Luilui6666-手机.wav](https://commons.wikimedia.org/wiki/File:LL-Q9192_%28cmn%29-Luilui6666-%E6%89%8B%E6%9C%BA.wav), Luilui6666 (Lingua Libre), CC BY-SA 4.0
+- `audio/sho4uda4o.mp3` (受到 shòudào): [File:LL-Q9192 (cmn)-CanonNi-受到.wav](https://commons.wikimedia.org/wiki/File:LL-Q9192_%28cmn%29-CanonNi-%E5%8F%97%E5%88%B0.wav), CanonNi (Lingua Libre), CC0
+- `audio/shu1dia4n.mp3` (书店 shūdiàn): [File:LL-Q9192 (cmn)-Luilui6666-书店.wav](https://commons.wikimedia.org/wiki/File:LL-Q9192_%28cmn%29-Luilui6666-%E4%B9%A6%E5%BA%97.wav), Luilui6666 (Lingua Libre), CC BY-SA 4.0
+- `audio/shuo1hua4.mp3` (说话 shuōhuà): [File:LL-Q9192 (cmn)-CanonNi-说话.wav](https://commons.wikimedia.org/wiki/File:LL-Q9192_%28cmn%29-CanonNi-%E8%AF%B4%E8%AF%9D.wav), CanonNi (Lingua Libre), CC0
+- `audio/wa3ngzha4n.mp3` (网站 wǎngzhàn): [File:LL-Q9192 (cmn)-CanonNi-网站.wav](https://commons.wikimedia.org/wiki/File:LL-Q9192_%28cmn%29-CanonNi-%E7%BD%91%E7%AB%99.wav), CanonNi (Lingua Libre), CC0
+- `audio/wa4imia4n.mp3` (外面 wàimiàn): [File:LL-Q9192 (cmn)-Luilui6666-外面.wav](https://commons.wikimedia.org/wiki/File:LL-Q9192_%28cmn%29-Luilui6666-%E5%A4%96%E9%9D%A2.wav), Luilui6666 (Lingua Libre), CC BY-SA 4.0
+- `audio/we4ishe1ngjia1n.mp3` (卫生间 wèishēngjiān): [File:LL-Q9192 (cmn)-CanonNi-卫生间.wav](https://commons.wikimedia.org/wiki/File:LL-Q9192_%28cmn%29-CanonNi-%E5%8D%AB%E7%94%9F%E9%97%B4.wav), CanonNi (Lingua Libre), CC0
+- `audio/xi4nyo4ngka3.mp3` (信用卡 xìnyòngkǎ): [File:LL-Q9192 (cmn)-Luilui6666-信用卡.wav](https://commons.wikimedia.org/wiki/File:LL-Q9192_%28cmn%29-Luilui6666-%E4%BF%A1%E7%94%A8%E5%8D%A1.wav), Luilui6666 (Lingua Libre), CC BY-SA 4.0
+- `audio/xia4_yu3.mp3` (下雨 xià yǔ): [File:LL-Q9192 (cmn)-CanonNi-下雨.wav](https://commons.wikimedia.org/wiki/File:LL-Q9192_%28cmn%29-CanonNi-%E4%B8%8B%E9%9B%A8.wav), CanonNi (Lingua Libre), CC0
+- `audio/xia4ba1n.mp3` (下班 xiàbān): [File:LL-Q9192 (cmn)-Luilui6666-下班.wav](https://commons.wikimedia.org/wiki/File:LL-Q9192_%28cmn%29-Luilui6666-%E4%B8%8B%E7%8F%AD.wav), Luilui6666 (Lingua Libre), CC BY-SA 4.0
+- `audio/xue2qi1.mp3` (学期 xuéqī): [File:LL-Q9192 (cmn)-CanonNi-学期.wav](https://commons.wikimedia.org/wiki/File:LL-Q9192_%28cmn%29-CanonNi-%E5%AD%A6%E6%9C%9F.wav), CanonNi (Lingua Libre), CC0
+- `audio/yi1nwe4i.mp3` (因为 yīnwèi): [File:LL-Q9192 (cmn)-Luilui6666-因为.wav](https://commons.wikimedia.org/wiki/File:LL-Q9192_%28cmn%29-Luilui6666-%E5%9B%A0%E4%B8%BA.wav), Luilui6666 (Lingua Libre), CC BY-SA 4.0
+- `audio/yi2xia4.mp3` (一下 yíxià): [File:LL-Q9192 (cmn)-Luilui6666-一下.wav](https://commons.wikimedia.org/wiki/File:LL-Q9192_%28cmn%29-Luilui6666-%E4%B8%80%E4%B8%8B.wav), Luilui6666 (Lingua Libre), CC BY-SA 4.0
+- `audio/yo4ubian.mp3` (右边 yòubian): [File:LL-Q9192 (cmn)-Luilui6666-右边.wav](https://commons.wikimedia.org/wiki/File:LL-Q9192_%28cmn%29-Luilui6666-%E5%8F%B3%E8%BE%B9.wav), Luilui6666 (Lingua Libre), CC BY-SA 4.0
+- `audio/za3oshang.mp3` (早上 zǎoshang): [File:LL-Q9192 (cmn)-Luilui6666-早上.wav](https://commons.wikimedia.org/wiki/File:LL-Q9192_%28cmn%29-Luilui6666-%E6%97%A9%E4%B8%8A.wav), Luilui6666 (Lingua Libre), CC BY-SA 4.0
+- `audio/zho1ngguo2.mp3` (中国 Zhōngguó): [File:LL-Q9192 (cmn)-Luilui6666-中国.wav](https://commons.wikimedia.org/wiki/File:LL-Q9192_%28cmn%29-Luilui6666-%E4%B8%AD%E5%9B%BD.wav), Luilui6666 (Lingua Libre), CC BY-SA 4.0
+- `audio/zuo3bian.mp3` (左边 zuǒbian): [File:LL-Q9192 (cmn)-Luilui6666-左边.wav](https://commons.wikimedia.org/wiki/File:LL-Q9192_%28cmn%29-Luilui6666-%E5%B7%A6%E8%BE%B9.wav), Luilui6666 (Lingua Libre), CC BY-SA 4.0
+
+## Qwen3-TTS 1.7B CustomVoice (166)
+
+- `audio/ba1ng.mp3` (帮 bāng): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/ba1nji2.mp3` (班级 bānjí): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/ba1njia1.mp3` (搬家 bānjiā): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/ba2ise4.mp3` (白色 báisè): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/ba2itia1n.mp3` (白天 báitiān): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/ba4ngo1ngshi4.mp3` (办公室 bàngōngshì): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/bi4ngre2n.mp3` (病人 bìngrén): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/bu2jia4n.mp3` (不见 bújiàn): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/bu4xi2ng.mp3` (不行 bùxíng): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/ca3odi4.mp3` (草地 cǎodì): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/cha1oshi4.mp3` (超市 chāoshì): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/cha2ng_jia4n.mp3` (常见 cháng jiàn): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/cha2ng_yo4ng.mp3` (常用 cháng yòng): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/chu1guo2.mp3` (出国 chūguó): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/chu1me2n.mp3` (出门 chūmén): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/chu1yua4n.mp3` (出院 chūyuàn): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/chu1zho1ng.mp3` (初中 chūzhōng): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/chu2le.mp3` (除了 chúle): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/co1ngmi2ng.mp3` (聪明 cōngmíng): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/co2ngxia3o.mp3` (从小 cóngxiǎo): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/da3che1.mp3` (打车 dǎchē): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/da3ka1i.mp3` (打开 dǎkāi): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/da4ren.mp3` (大人 dàren): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/da4xia3o.mp3` (大小 dàxiǎo): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/da4xio2ngma1o.mp3` (大熊猫 dàxióngmāo): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/da4xue2she1ng.mp3` (大学生 dàxuéshēng): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/de2fe1n.mp3` (得分 défēn): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/dehua4.mp3` (的话 dehuà): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/dia4nyi3ngyua4n.mp3` (电影院 diànyǐngyuàn): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/dia4nzi3shu1.mp3` (电子书 diànzǐshū): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/do1ngbe3i.mp3` (东北 dōngběi): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/do1ngfa1ng.mp3` (东方 dōngfāng): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/do1ngna2n.mp3` (东南 dōngnán): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/do3ngde.mp3` (懂得 dǒngde): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/do4ngwu4yua2n.mp3` (动物园 dòngwùyuán): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/du2shu1.mp3` (读书 dúshū): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/dua3nku4.mp3` (短裤 duǎnkù): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/e3rji1.mp3` (耳机 ěrjī): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/fa1ngbia4nmia4n.mp3` (方便面 fāngbiànmiàn): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/fa2ngzi.mp3` (房子 fángzi): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/fa4ngxue2.mp3` (放学 fàngxué): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/fu1qi1.mp3` (夫妻 fūqī): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/ga1otie3.mp3` (高铁 gāotiě): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/ga1ozho1ng.mp3` (高中 gāozhōng): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/ga3n_xi4ngqu4.mp3` (感兴趣 gǎn xìngqù): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/go1ngjia1oche1.mp3` (公交车 gōngjiāochē): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/go1ngzuo4ri4.mp3` (工作日 gōngzuòrì): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/gua1nji1.mp3` (关机 guānjī): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/gua1nzhu4.mp3` (关注 guānzhù): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- inline `REC["guo"]` (过 guo): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena, neutral syllable from 去过), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/guo4jie2.mp3` (过节 guòjié): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/guo4nia2n.mp3` (过年 guònián): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/ha3oduo1.mp3` (好多 hǎoduō): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/ha3oti1ng.mp3` (好听 hǎotīng): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/ha3owa2nr.mp3` (好玩儿 hǎowánr): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/he1ise4.mp3` (黑色 hēisè): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/ho2ng_lv4de1ng.mp3` (红绿灯 hóng-lǜdēng): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/ho2ngcha2.mp3` (红茶 hóngchá): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/ho4umia4n.mp3` (后面 hòumiàn): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/ho4unia2n.mp3` (后年 hòunián): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/hua2ngse4.mp3` (黄色 huángsè): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/hua4n.mp3` (换 huàn): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/ji1pia4o.mp3` (机票 jīpiào): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/jia3npia4o.mp3` (检票 jiǎnpiào): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/jia4qi1.mp3` (假期 jiàqī): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/jie3me4i.mp3` (姐妹 jiěmèi): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/jiu3dia4n.mp3` (酒店 jiǔdiàn): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/ka1ihua1.mp3` (开花 kāihuā): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/ka1ihui4.mp3` (开会 kāihuì): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/ka1iji1.mp3` (开机 kāijī): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/ka4nla2i.mp3` (看来 kànlái): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/ko1ngtia2o.mp3` (空调 kōngtiáo): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/kua4iya4o.mp3` (快要 kuàiyào): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/la3ore2n.mp3` (老人 lǎorén): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/lia2otia1nr.mp3` (聊天儿 liáotiānr): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/lo2uti1.mp3` (楼梯 lóutī): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/lu4bia1n.mp3` (路边 lùbiān): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/lu4ko3u.mp3` (路口 lùkǒu): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/lu4shang.mp3` (路上 lùshang): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/lv4se4.mp3` (绿色 lǜsè): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/ma3lu4.mp3` (马路 mǎlù): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/me2ishi4.mp3` (没事 méishì): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/me2npia4o.mp3` (门票 ménpiào): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/mi2ngbai.mp3` (明白 míngbai): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/mi2ngda1n.mp3` (名单 míngdān): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/mi2ngre2n.mp3` (名人 míngrén): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/mia4nqia2n.mp3` (面前 miànqián): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/na2nha2ir.mp3` (男孩儿 nánháir): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/na2npe2ngyou.mp3` (男朋友 nánpéngyou): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/na2nshe1ng.mp3` (男生 nánshēng): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/na2nti1ng.mp3` (难听 nántīng): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/na2nti2.mp3` (难题 nántí): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/na3ge.mp3` (哪个 nǎge): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/na3icha2.mp3` (奶茶 nǎichá): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/na3xie1.mp3` (哪些 nǎxiē): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/na4bia1n.mp3` (那边 nàbiān): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/na4r.mp3` (那儿 nàr): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/nv3ha2ir.mp3` (女孩儿 nǚháir): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/nv3pe2ngyou.mp3` (女朋友 nǚpéngyou): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/nv3she1ng.mp3` (女生 nǚshēng): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/pa1izha4o.mp3` (拍照 pāizhào): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/qia2nnia2n.mp3` (前年 qiánnián): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/qia2ntia1n.mp3` (前天 qiántiān): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/qiu2cha3ng.mp3` (球场 qiúchǎng): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/re4nde.mp3` (认得 rènde): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/sha1ngcha3ng.mp3` (商场 shāngchǎng): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/sha4ngyi1.mp3` (上衣 shàngyī): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/she1nbia1n.mp3` (身边 shēnbiān): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/she1nga1o.mp3` (身高 shēngāo): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/sho1uda4o.mp3` (收到 shōudào): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/shu1ba1o.mp3` (书包 shūbāo): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/si4ji4.mp3` (四季 sìjì): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/ti3yu4gua3n.mp3` (体育馆 tǐyùguǎn): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/wa3ndia3n.mp3` (晚点 wǎndiǎn): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/wa3ngshang.mp3` (网上 wǎngshang): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/wa4idi4.mp3` (外地 wàidì): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/wa4ima4i.mp3` (外卖 wàimài): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/xi1be3i.mp3` (西北 xīběi): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/xi1fa1ng.mp3` (西方 xīfāng): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/xi1na2n.mp3` (西南 xīnán): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/xi1ngqi1tia1n.mp3` (星期天 xīngqītiān): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/xi2ngli.mp3` (行李 xíngli): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/xi3_a4i.mp3` (喜爱 xǐ’ài): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/xi3sho3ujia1n.mp3` (洗手间 xǐshǒujiān): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/xi4ngmi2ng.mp3` (姓名 xìngmíng): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/xia1ngzi.mp3` (箱子 xiāngzi): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/xia3ope2ngyo3u.mp3` (小朋友 xiǎopéngyǒu): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/xia3oqu1.mp3` (小区 xiǎoqū): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/xia3oshi2hou.mp3` (小时候 xiǎoshíhou): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/xia3oxue2.mp3` (小学 xiǎoxué): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/xia3oxue2she1ng.mp3` (小学生 xiǎoxuéshēng): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/xia4mia4n.mp3` (下面 xiàmiàn): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/xia4ngji1.mp3` (相机 xiàngjī): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/xia4oyua2n.mp3` (校园 xiàoyuán): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/xiu1jia4.mp3` (休假 xiūjià): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/ya2shua1.mp3` (牙刷 yáshuā): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/ya4odia4n.mp3` (药店 yàodiàn): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/yi2ba4n.mp3` (一半 yíbàn): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/yi2nha2ngka3.mp3` (银行卡 yínhángkǎ): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/yi3sha4ng.mp3` (以上 yǐshàng): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/yi3wa4i.mp3` (以外 yǐwài): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/yi3xia4.mp3` (以下 yǐxià): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/yo2ujia4n.mp3` (邮件 yóujiàn): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/yo2uke4.mp3` (游客 yóukè): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/yo2uxia1ng.mp3` (邮箱 yóuxiāng): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/yo3udia3nr.mp3` (有点儿 yǒudiǎnr): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/yo3ugua1n.mp3` (有关 yǒuguān): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/yo3ushi2.mp3` (有时 yǒushí): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/yo3uyo4ng.mp3` (有用 yǒuyòng): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/yu3yi1.mp3` (雨衣 yǔyī): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/yu4jia4n.mp3` (遇见 yùjiàn): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/yu4ndo4nghui4.mp3` (运动会 yùndònghuì): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/yu4ndo4ngyua2n.mp3` (运动员 yùndòngyuán): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/ze3nme_ba4n.mp3` (怎么办 zěnme bàn): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/zha4ngfu.mp3` (丈夫 zhàngfu): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/zhe4bia1n.mp3` (这边 zhèbiān): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/zhe4r.mp3` (这儿 zhèr): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/zhi2da4o.mp3` (直到 zhídào): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/zhi3_ne2ng.mp3` (只能 zhǐ néng): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/zhi3yo3u.mp3` (只有 zhǐyǒu): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/zho1ngxue2she1ng.mp3` (中学生 zhōngxuéshēng): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/zhu4yua4n.mp3` (住院 zhùyuàn): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/zo3ng.mp3` (总 zǒng): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/zo3ulu4.mp3` (走路 zǒulù): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/zuo4_fa4n.mp3` (做饭 zuò fàn): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
+- `audio/zuo4ke4.mp3` (做客 zuòkè): Qwen3-TTS-12Hz-1.7B-CustomVoice (Serena), Qwen3-TTS 1.7B (Alibaba Qwen), Apache 2.0
